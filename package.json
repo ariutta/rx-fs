@@ -12,5 +12,9 @@
     "fs"
   ],
   "author": "Anders Riutta",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "rx": "^4.0.7"
+  }
 }
