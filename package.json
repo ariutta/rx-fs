@@ -6,12 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ariutta/rx-fs.git"
+  },
   "keywords": [
     "rx",
     "rxjs",
     "fs"
   ],
   "author": "Anders Riutta",
+  "bugs": {
+    "url": "https://github.com/ariutta/rx-fs/issues"
+  },
+  "homepage": "https://github.com/ariutta/rx-fs#readme",
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.10.1",
