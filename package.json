@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.10.1",
-    "rx": "^4.0.7"
+    "rx": "^4.0.7",
+    "rx-node-extra": "https://github.com/ariutta/rx-node-extra.git"
   }
 }
