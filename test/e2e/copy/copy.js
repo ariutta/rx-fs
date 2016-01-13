@@ -1,10 +1,10 @@
 // This should copy input.txt to output.txt
 
-var rxFs = require('../../../index.js');
+var RxFs = require('../../../index.js');
 
 var inputPath = './input.txt';
 var outputPath = './output.txt';
 
-var source = rxFs.createReadObservable(inputPath);
-var sink = rxFs.createWriteStream(outputPath);
+var source = RxFs.createReadObservable(inputPath);
+var sink = RxFs.createWriteStream(outputPath);
 source.pipe(sink);
