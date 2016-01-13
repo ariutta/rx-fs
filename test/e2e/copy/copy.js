@@ -1,3 +1,5 @@
+// This should copy input.txt to output.txt
+
 var rxFs = require('../../../index.js');
 
 var inputPath = './input.txt';

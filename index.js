@@ -13,11 +13,13 @@ function rxifyNodeObject(inputObject) {
           accumulator[key] = value;
         } else if (key.indexOf('Stream') > -1) {
           accumulator[key] = value;
-          /*
+          /* TODO does it make sense to add these methods?
+          // When should we use RxNode.fromWritableStream vs. RxNode.writeToStream?
           var observableKey = key.replace('Stream', 'Observable');
           if (key.indexOf('Write') > -1) {
             accumulator[observableKey] = RxNode.fromWritableStream(value);
           } else {
+            // TODO how should this handle the notification that a file was opened?
             accumulator[observableKey] = RxNode.fromReadableStream(value);
           }
           //*/
