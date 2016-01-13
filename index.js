@@ -12,12 +12,13 @@ function rxifyNodeObject(inputObject) {
         if (key.indexOf('Sync') > -1) {
           accumulator[key] = value;
         } else if (key.indexOf('Stream') > -1) {
-          //accumulator[key] = value;
+          accumulator[key] = value;
           /*
+          var observableKey = key.replace('Stream', 'Observable');
           if (key.indexOf('Write') > -1) {
-            accumulator[key] = RxNode.fromWritableStream(value);
+            accumulator[observableKey] = RxNode.fromWritableStream(value);
           } else {
-            accumulator[key] = RxNode.fromReadableStream(value);
+            accumulator[observableKey] = RxNode.fromReadableStream(value);
           }
           //*/
         } else {
@@ -33,9 +34,9 @@ function rxifyNodeObject(inputObject) {
     }, {});
 }
 
-var rxFs = rxifyNodeObject(fs);
+var RxFs = rxifyNodeObject(fs);
 
-rxFs.createReadObservable = function(path, options) {
+RxFs.createReadObservable = function(path, options) {
   var stream = fs.createReadStream(path, options);
   options = options || {};
 
@@ -45,12 +46,4 @@ rxFs.createReadObservable = function(path, options) {
   return resultSource;
 };
 
-rxFs.createWriteObservable = function(path, options) {
-  var stream = fs.createWriteStream(path, options);
-  return function(source) {
-    RxNode.writeToStream(source, stream);
-    return source;
-  };
-};
-
-module.exports = rxFs;
+module.exports = RxFs;
