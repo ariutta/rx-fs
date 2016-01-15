@@ -4,7 +4,7 @@
   "description": "RxJs wrapper for Node's fs module.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test/e2e/move/move.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,9 @@
     "lodash": "^3.10.1",
     "rx": "^4.0.7",
     "rx-node-extra": "https://github.com/ariutta/rx-node-extra.git"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
   }
 }
