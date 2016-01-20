@@ -1,6 +1,6 @@
 {
   "name": "rx-fs",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "RxJs wrapper for Node's fs module.",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,28 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.10.1",
-    "rx": "^4.0.7",
-    "rx-node-extra": "https://github.com/ariutta/rx-node-extra.git"
+    "rx-node-extra": "^1.0.3"
   },
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4"
+  },
+  "semverBumper": {
+    "jsonFiles": [
+      {
+        "filepath": "package.json",
+        "key": "version"
+      }
+    ],
+    "grepOptions": {
+      "include": [],
+      "exclude": [],
+      "excludeDir": [
+        "./docs",
+        "./test",
+        "./bower_components",
+        "./lib"
+      ]
+    }
   }
 }
