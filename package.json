@@ -1,7 +1,7 @@
 {
   "name": "rx-fs",
   "version": "1.0.0-alpha.2",
-  "description": "RxJs wrapper for Node's fs module.",
+  "description": "RxJS wrapper for Node's fs module.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test/e2e/move/move.js"
