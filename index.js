@@ -1,7 +1,7 @@
 var _ = require('lodash');
 var fs = require('fs');
-var Rx = require('rx');
-var RxNode = require('rx-node-extra');
+var Rx = require('rx-extra');
+var RxNode = Rx.RxNode;
 
 // TODO not currently handling 'this' and prototypes
 function rxifyNodeObject(inputObject) {
